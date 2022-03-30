@@ -72,6 +72,26 @@ static void draw_min_hand(GContext *ctx, int length) {
   graphics_context_set_stroke_color(ctx, settings.accent_color);
   graphics_context_set_stroke_width(ctx, settings.min_hand_size);
   graphics_draw_line(ctx, center, end_point);
+
+  graphics_context_set_fill_color(ctx, settings.bg_color);
+  graphics_fill_circle(ctx, center, 30);
+}
+
+static void draw_digital_time(GContext *ctx) {
+  GRect bounds = layer_get_unobstructed_bounds(window_get_root_layer(main_window));
+  GPoint center = grect_center_point(&bounds);
+
+  int height = if_quickview_else(28, 24);
+
+  GRect box = GRect(0, bounds.size.h / 2 - (height / 2 + 4), bounds.size.w, height);
+
+  graphics_context_set_text_color(ctx, settings.accent_color);
+  
+  if(bounds.size.h == layer_get_bounds(window_get_root_layer(main_window)).size.h) {
+    graphics_draw_text(ctx, center_time, fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD), box, GTextOverflowModeTrailingEllipsis, GTextAlignmentCenter, 0);
+  } else {
+    graphics_draw_text(ctx, center_time, fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD), box, GTextOverflowModeTrailingEllipsis, GTextAlignmentCenter, 0);
+  }
 }
 
 void draw_dots_bg_update_proc(Layer *layer, GContext *ctx) {
@@ -85,4 +105,8 @@ void draw_analog_time_update_proc(Layer *layer, GContext *ctx) {
 
   draw_hour_dot(ctx, dist_from_center);
   draw_min_hand(ctx, dist_from_center);
+}
+
+void draw_digital_time_update_proc(Layer *layer, GContext *ctx) {
+  draw_digital_time(ctx);
 }

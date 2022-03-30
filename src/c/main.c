@@ -14,6 +14,7 @@ void update_stuff() {
 
   layer_mark_dirty(dots_layer);
   layer_mark_dirty(analog_time_layer);
+  layer_mark_dirty(digital_time_layer);
 }
 
 static void main_window_load(Window *window) {
@@ -33,6 +34,10 @@ static void main_window_load(Window *window) {
   analog_time_layer = layer_create(bounds);
   layer_set_update_proc(analog_time_layer, draw_analog_time_update_proc);
   layer_add_child(window_layer, analog_time_layer);
+
+  digital_time_layer = layer_create(bounds);
+  layer_set_update_proc(digital_time_layer, draw_digital_time_update_proc);
+  layer_add_child(window_layer, digital_time_layer);
 }
 
 static void main_window_unload(Window *window) {
