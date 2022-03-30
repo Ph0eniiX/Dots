@@ -1,0 +1,31 @@
+{
+  "name": "Dots",
+  "author": "Nikki",
+  "version": "1.0",
+  "keywords": ["pebble-app"],
+  "private": true,
+  "dependencies": {},
+  "pebble": {
+    "displayName": "Dots",
+    "uuid": "d2ac221c-a83c-49de-b295-b0985193015e",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk",
+      "diorite"
+    ],
+    "watchapp": {
+      "watchface": true
+    },
+    "messageKeys": [
+      "MainColorKey",
+      "AccentColorKey",
+      "BackgroundColorKey"
+    ],
+    "resources": {
+      "media": []
+    }
+  }
+}
