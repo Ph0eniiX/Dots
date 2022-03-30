@@ -2,9 +2,13 @@
   "name": "Dots",
   "author": "Nikki",
   "version": "1.0",
-  "keywords": ["pebble-app"],
+  "keywords": [
+    "pebble-app"
+  ],
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "pebble-clay": "^1.0.4"
+  },
   "pebble": {
     "displayName": "Dots",
     "uuid": "d2ac221c-a83c-49de-b295-b0985193015e",
@@ -22,7 +26,10 @@
     "messageKeys": [
       "MainColorKey",
       "AccentColorKey",
-      "BackgroundColorKey"
+      "BackgroundColorKey",
+      "NumHourDotsKey",
+      "DotSizeKey",
+      "MinHandSizeKey"
     ],
     "resources": {
       "media": []

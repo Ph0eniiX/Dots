@@ -4,7 +4,7 @@
 
 static void default_settings() {
     settings.main_color = GColorWhite;
-    settings.accent_color = GColorRed;
+    settings.accent_color = GColorVividCerulean;
     settings.bg_color = GColorBlack;
     settings.num_hour_dots = 12;
     settings.dot_size = 3;

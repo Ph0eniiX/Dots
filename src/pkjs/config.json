@@ -1,0 +1,47 @@
+[
+    {
+        "type": "section",
+        "items": [
+            {
+                "type": "heading",
+                "defaultValue": "Dots"
+            },
+            {
+                "type": "text",
+                "defaultValue": "By Nikki"
+            }
+        ]
+    },
+    {
+        "type": "section",
+        "items": [
+            {
+                "type": "heading",
+                "defaultValue": "Colors",
+                "size": "7"
+            },
+            {
+                "type": "color",
+                "messageKey": "MainColorKey",
+                "defaultValue": "0xFFFFFF",
+                "label": "Main Color"
+            },
+            {
+                "type": "color",
+                "messageKey": "AccentColorKey",
+                "defaultValue": "0x00AAFF",
+                "label": "Accent Color"
+            },
+            {
+                "type": "color",
+                "messageKey": "BackgroundColorKey",
+                "defaultValue": "0x000000",
+                "label": "Background Color"
+            }
+        ]
+    },
+    {
+        "type": "submit",
+        "defaultValue": "Save"
+    }
+]
