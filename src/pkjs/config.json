@@ -17,26 +17,123 @@
         "items": [
             {
                 "type": "heading",
-                "defaultValue": "Colors",
+                "defaultValue": "Config",
                 "size": "7"
             },
             {
                 "type": "color",
                 "messageKey": "MainColorKey",
-                "defaultValue": "0xFFFFFF",
-                "label": "Main Color"
+                "defaultValue": "0x000000",
+                "label": "Dots Color"
             },
             {
                 "type": "color",
                 "messageKey": "AccentColorKey",
-                "defaultValue": "0x00AAFF",
+                "defaultValue": "0xFF0000",
                 "label": "Accent Color"
             },
             {
                 "type": "color",
+                "messageKey": "BackgroundColor2Key",
+                "defaultValue": "0xFFFFFF",
+                "label": "BG Circle Color"
+            },
+            {
+                "type": "color",
                 "messageKey": "BackgroundColorKey",
-                "defaultValue": "0x000000",
+                "defaultValue": "0x000055",
                 "label": "Background Color"
+            },
+            {
+                "type": "select",
+                "messageKey": "NumHourDotsKey",
+                "defaultValue": "12",
+                "label": "Number of Dots",
+                "options": [
+                    {
+                        "label": "12",
+                        "value": "12"
+                    },
+                    {
+                        "label": "4",
+                        "value": "4"
+                    },
+                    {
+                        "label": "1",
+                        "value": "1"
+                    },
+                    {
+                        "label": "0",
+                        "value": "0"
+                    }
+                ]
+            },
+            {
+                "type": "select",
+                "defaultValue": "0",
+                "messageKey": "NumFlagKey",
+                "label": "Pride Flag Background",
+                "capabilities": ["COLOR"],
+                "options": [
+                    {
+                        "value": "0",
+                        "label": "None"
+                    },
+                    {
+                        "value": "1",
+                        "label": "Pride"
+                    },
+                    {
+                        "value": "2",
+                        "label": "Transgender"
+                    },
+                    {
+                        "value": "3",
+                        "label": "Bisexual"
+                    },
+                    {
+                        "value": "4",
+                        "label": "Lesbian"
+                    },
+                    {
+                        "value": "5",
+                        "label": "Pansexual"
+                    },
+                    {
+                        "value": "6",
+                        "label": "Asexual"
+                    },
+                    {
+                        "value": "7",
+                        "label": "Nonbinary"
+                    }
+                ]
+            },
+            {
+                "type": "select",
+                "defaultValue": "0",
+                "label": "Flag orientation",
+                "messageKey": "RotFlagKey",
+                "description": "(it's measured clockwise)",
+                "capabilities": ["COLOR"],
+                "options": [
+                    {
+                        "label": "0 Degrees",
+                        "value": "0"
+                    },
+                    {
+                        "label": "90 Degrees",
+                        "value": "1"
+                    },
+                    {
+                        "label": "180 Degrees",
+                        "value": "2"
+                    },
+                    {
+                        "label": "270 Degrees",
+                        "value": "3"
+                    }
+                ]
             }
         ]
     },

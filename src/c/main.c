@@ -27,6 +27,10 @@ static void main_window_load(Window *window) {
   update_time();
 
   //creates and sets things for each layer
+  flag_layer = layer_create(bounds);
+  layer_set_update_proc(flag_layer, draw_flag_update_proc);
+  layer_add_child(window_layer, flag_layer);
+
   dots_layer = layer_create(bounds);
   layer_set_update_proc(dots_layer, draw_dots_bg_update_proc);
   layer_add_child(window_layer, dots_layer);

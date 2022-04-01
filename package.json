@@ -27,12 +27,20 @@
       "MainColorKey",
       "AccentColorKey",
       "BackgroundColorKey",
+      "BackgroundColor2Key",
       "NumHourDotsKey",
-      "DotSizeKey",
-      "MinHandSizeKey"
+      "NumFlagKey",
+      "RotFlagKey"
     ],
     "resources": {
-      "media": []
+      "media": [
+        {
+          "menuIcon": "true",
+          "type": "png",
+          "name": "MENU_ICON",
+          "file": "dots.png"
+        }
+      ]
     }
   }
 }

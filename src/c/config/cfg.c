@@ -3,10 +3,17 @@
 #include "../main.h"
 
 static void default_settings() {
-    settings.main_color = GColorWhite;
-    settings.accent_color = GColorVividCerulean;
-    settings.bg_color = GColorBlack;
+    //part of the config page
+    settings.main_color = GColorBlack;
+    settings.accent_color = GColorRed;
+    settings.bg_color = GColorOxfordBlue;
+    settings.bg_color2 = GColorWhite;
     settings.num_hour_dots = 12;
+    settings.num_flag = 0;
+    settings.rot_flag = 0;
+
+    //not in the config page,
+    //i just used this to easily change them in one file
     settings.dot_size = 3;
     settings.min_hand_size = 4;
 }
