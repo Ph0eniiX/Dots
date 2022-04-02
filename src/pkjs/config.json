@@ -24,24 +24,28 @@
                 "type": "color",
                 "messageKey": "MainColorKey",
                 "defaultValue": "0x000000",
+                "allowGray": "true",
                 "label": "Dots Color"
             },
             {
                 "type": "color",
                 "messageKey": "AccentColorKey",
                 "defaultValue": "0xFF0000",
+                "allowGray": "true",
                 "label": "Accent Color"
             },
             {
                 "type": "color",
                 "messageKey": "BackgroundColor2Key",
                 "defaultValue": "0xFFFFFF",
+                "allowGray": "true",
                 "label": "BG Circle Color"
             },
             {
                 "type": "color",
                 "messageKey": "BackgroundColorKey",
                 "defaultValue": "0x000055",
+                "allowGray": "true",
                 "label": "Background Color"
             },
             {
