@@ -1,0 +1,10 @@
+TODO LIST FOR THIS PROJECT:
+
+Next Version:
+ - Dots that surround a rectangular screen (kinda like the short lines option for TicToc+)
+ - Some sort of battery indicator (a unique one maybe, a dot that changes color as the battery drains)
+ - Some way to show the date 
+
+Future versions:
+ - Animations!
+ - i'll add more here once i think of stuff
