@@ -4,6 +4,7 @@ Next Version:
  - Dots that surround a rectangular screen (kinda like the short lines option for TicToc+)
  - Some sort of battery indicator (a unique one maybe, a dot that changes color as the battery drains)
  - Some way to show the date 
+ - BT disconnect buzz
 
 Future versions:
  - Animations!
