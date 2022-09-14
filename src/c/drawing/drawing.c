@@ -2,8 +2,6 @@
 #include "drawing.h"
 #include "../main.h"
 
-extern int *flag_colors[], num_stripes[];
-
 static int hour, min;
 static char center_time[] = "hh:mm";
 
@@ -95,9 +93,6 @@ static void draw_digital_time(GContext *ctx) {
     }
 }
 
-void draw_flag_update_proc(Layer *layer, GContext *ctx) {
-    draw_flag(num_stripes[settings.num_flag], flag_colors[settings.num_flag], ctx);
-}
 
 void draw_dots_bg_update_proc(Layer *layer, GContext *ctx) {
     int dist_from_center = PBL_IF_ROUND_ELSE(60, if_quickview_else(58, 46));
