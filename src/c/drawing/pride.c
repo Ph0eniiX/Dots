@@ -1,7 +1,7 @@
 #include <pebble.h>
 #include "../main.h"
 
-// definitions of each flag's hex code variables
+// definitions of each flag's hex code color variables
 static int clear[] = {0x000000};
 static int pride[] = {0xFF0000, 0xFFAA00, 0xFFFF00, 0x00FF00, 0x0000FF, 0xAA00AA};
 static int trans[] = {0x00AAFF, 0xFF55FF, 0xFFFFFF, 0xFF55FF, 0x00AAFF};

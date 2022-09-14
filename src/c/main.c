@@ -1,7 +1,5 @@
-#include "main.h"
-
 #include <pebble.h>
-
+#include "main.h"
 #include "config/cfg.h"
 #include "drawing/drawing.h"
 #include "messaging/msg.h"

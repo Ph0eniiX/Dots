@@ -1,7 +1,5 @@
 TODO LIST FOR THIS PROJECT:
 
-IMPORTANT: please clean up code 
-
 Next Version:
  - Dots that surround a rectangular screen (kinda like the short lines option for TicToc+)
  - Some sort of battery indicator (a unique one maybe, a dot that changes color as the battery drains)
