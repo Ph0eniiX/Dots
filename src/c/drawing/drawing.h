@@ -2,7 +2,6 @@
 
 void update_time();
 
-void draw_flag(int segments, int colors[], GContext *ctx);
 void draw_flag_update_proc(Layer *layer, GContext *ctx);
 
 void draw_dots_bg_update_proc(Layer *layer, GContext *ctx);

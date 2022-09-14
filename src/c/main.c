@@ -6,12 +6,6 @@
 #include "drawing/drawing.h"
 #include "messaging/msg.h"
 
-// tick handler, calculates and updates time
-static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
-    update_time();
-    layer_mark_dirty(analog_time_layer);
-}
-
 // updates everything universally across program
 void update_stuff() {
     window_set_background_color(main_window, settings.bg_color);
@@ -20,6 +14,13 @@ void update_stuff() {
     layer_mark_dirty(dots_layer);
     layer_mark_dirty(analog_time_layer);
     layer_mark_dirty(digital_time_layer);
+    layer_mark_dirty(flag_layer);
+}
+
+// tick handler, calculates and updates time
+static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
+    update_time();
+    layer_mark_dirty(analog_time_layer);
 }
 
 // loads main window and initializes various layers

@@ -11,6 +11,7 @@ static int pansexual[] = {0xFF00FF, 0xFFFF00, 0x00AAFF};
 static int asexual[] = {0x000000, 0xAAAAAA, 0xFFFFFF, 0xAA00AA};
 static int nonbinary[] = {0xFFFF55, 0xFFFFFF, 0xAA55AA, 0x000000};
 
+// array that puts the above arrays into 
 int *flag_colors[] = {clear, pride, trans, bisexual, lesbian, pansexual, asexual, nonbinary};
 int num_stripes[] = {0, 6, 5, 5, 7, 3, 4, 4};
 
@@ -22,47 +23,69 @@ static void draw_flag(int segments, int colors[], GContext *ctx) {
     // height and width of each bar in pixels
     int bar_height, bar_width;
 
+    // switch for the rotation value of the flag
+        // default = 0 degrees
+        // 1 = 90 degrees
+        // 2 = 180 degrees
+        // 3 = 270 degrees
     switch (settings.rot_flag) {
         default:
+            // everything is normal in the height for each bar
             bar_height = bounds.size.h / segments + (bounds.size.h % segments != 0);
             bar_width = bounds.size.w;
             break;
         case 1:
+            // 90 degrees, the height is set to the full screen height 
+                // and the width is the one being segmented
             bar_height = bounds.size.h;
             bar_width = -1 * bounds.size.w / segments - (bounds.size.w % segments != 0);
             break;
         case 2:
+            // 180 degrees, basically just default inverted
             bar_height = -1 * bounds.size.h / segments - (-1 * bounds.size.h % segments != 0);
             bar_width = bounds.size.w;
             break;
         case 3:
+            // 270 degrees, basically just 90 degrees inverted
             bar_height = bounds.size.h;
             bar_width = bounds.size.w / segments + (bounds.size.w % segments != 0);
     }
 
+    // loop that draws a flag segment and repeats until all of 'em are drawn
     for (int i = 0; i < segments; i++) {
+        // defines flag stripe rectangle without initialization 
         GRect flag_stripe;
 
+        // switch statement for rotations again,
+            // which sets the value of the GRect "flag_stripe" to the correct orientation 
+            // and location values according to the loop number
         switch (settings.rot_flag) {
             default:
+                // 0 degrees
                 flag_stripe = GRect(0, bar_height * i, bar_width, bar_height);
                 break;
             case 1:
+                // 90 degrees
                 flag_stripe = GRect(bounds.size.w + (bar_width * i), 0, bar_width, bar_height);
                 break;
             case 2:
+                // 180 degrees
                 flag_stripe = GRect(0, bounds.size.h + (bar_height * i), bar_width, bar_height);
                 break;
             case 3:
+                // 270 degrees
                 flag_stripe = GRect(bar_width * i, 0, bar_width, bar_height);
                 break;
         }
 
+        // sets the fill color of the stripe to that of the current segment
+            // then draws the actual rectangle
         graphics_context_set_fill_color(ctx, GColorFromHEX(colors[i]));
         graphics_fill_rect(ctx, flag_stripe, 0, GCornerNone);
     }
 }
 
+// update_proc, sets function to call when marking layer as dirty
 void draw_flag_update_proc(Layer *layer, GContext *ctx) {
     draw_flag(num_stripes[settings.num_flag], flag_colors[settings.num_flag], ctx);
 }
