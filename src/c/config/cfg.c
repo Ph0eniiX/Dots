@@ -10,9 +10,9 @@ static void default_settings() {
     settings.bg_color = GColorOxfordBlue;
     settings.bg_color2 = GColorWhite;
     settings.num_hour_dots = 12;
+    settings.do_bt_buzz = true;
     settings.num_flag = 0;
     settings.rot_flag = 0;
-    settings.do_bt_buzz = true;
 
     // i just used this to easily change them in one file
     settings.dot_size = 3;

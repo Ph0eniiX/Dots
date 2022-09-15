@@ -30,7 +30,8 @@
       "BackgroundColor2Key",
       "NumHourDotsKey",
       "NumFlagKey",
-      "RotFlagKey"
+      "RotFlagKey",
+      "DoBTBuzzKey"
     ],
     "resources": {
       "media": [

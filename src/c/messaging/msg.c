@@ -32,6 +32,11 @@ static void inbox_recieved_handler(DictionaryIterator *iter, void *ctx) {
         settings.bg_color2 = GColorFromHEX(BackgroundColor2_t->value->int32);
     }
 
+    Tuple *DoBTBuzz_t = dict_find(iter, MESSAGE_KEY_DoBTBuzzKey);
+    if(DoBTBuzz_t) {
+        settings.do_bt_buzz = DoBTBuzz_t->value->int32 == 1;
+    }
+
     // number of hour dots
     Tuple *NumHourDot_t = dict_find(iter, MESSAGE_KEY_NumHourDotsKey);
     if(NumHourDot_t) {
