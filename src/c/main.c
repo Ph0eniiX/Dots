@@ -67,9 +67,9 @@ static void init() {
     // set to SECOND_UNIT to use more battery but also be able to use seconds
     tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
 
-    // initialize mesasging and load settings saved in persistent storage
     init_msg();
     load_settings();
+    bluetooth_callback(connection_service_peek_pebble_app_connection());  
 
     // set the load and unload functions for the main window
     window_set_window_handlers(main_window, (WindowHandlers){
@@ -77,10 +77,8 @@ static void init() {
         .unload = main_window_unload
     });
 
-    // ESSENTIAL: actually push the layer/window stack to the device upon loading
+    // ESSENTIAL: actually push the stack and update everything
     window_stack_push(main_window, true);
-
-    // update everything after pushing stack to screen
     update_stuff();
 }
 
@@ -90,8 +88,7 @@ static void deinit() {
     window_destroy(main_window);
 }
 
-// MAIN PROGRAM METHOD
-// initializes, does the entire app event loop, then deinitializes
+// MAIN PROGRAM
 int main(void) {
     init();
     app_event_loop();

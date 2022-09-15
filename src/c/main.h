@@ -15,6 +15,7 @@ typedef struct ClaySettings {
     int num_hour_dots;
     int num_flag;
     int rot_flag;
+    bool do_bt_buzz;
 
     //not customizable    
     int dot_size;

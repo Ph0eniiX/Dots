@@ -6,7 +6,7 @@
 static int hour, min;
 static char center_time[] = "hh:mm";
 
-// integer method that returns an int if true or false
+// integer function that returns an int if true or false
     // detects if the actual screen height is the same as the unobstructed screen height
 static int if_quickview_else(int if_no, int if_yes) {
     if (layer_get_unobstructed_bounds(window_get_root_layer(main_window)).size.h == layer_get_bounds(window_get_root_layer(main_window)).size.h) {
