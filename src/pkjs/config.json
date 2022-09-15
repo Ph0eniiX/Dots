@@ -49,12 +49,6 @@
                 "label": "Background Color"
             },
             {
-                "type": "toggle",
-                "messageKey": "DoBTBuzzKey",
-                "defaultValue": "true",
-                "label": "Enable buzz on BT disconnect"
-            },
-            {
                 "type": "select",
                 "messageKey": "NumHourDotsKey",
                 "defaultValue": "12",
@@ -77,6 +71,12 @@
                         "value": "0"
                     }
                 ]
+            },
+            {
+                "type": "toggle",
+                "messageKey": "DoBTBuzzKey",
+                "defaultValue": "true",
+                "label": "Enable buzz on BT disconnect"
             },
             {
                 "type": "select",
